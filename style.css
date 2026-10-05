@@ -85,6 +85,35 @@ details details[open] > summary::after {
     color: #C084FC;
 }
 
+p {
+    font-family: system-ui, -apple-system, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+p a {
+    display: inline-block;
+    background-color: #470F0F;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+p a:hover {
+    background-color: #571313;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+p a:active {
+    transform: translateY(0);
+}
+
 footer {
     border-top: 1px solid #262626;
     padding: 1.25rem 1.75rem;
