@@ -7,6 +7,84 @@ html, body {
     width: 90%;
     margin: 0 auto;
 }
+
+details {
+    background-color: black;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    margin: 12px auto;
+    padding: 12px 18px;
+    text-align: left;
+    transition: all 0.2s ease-in-out;
+}
+
+details:hover {
+    border-color: #555555;
+    background-color: black;
+}
+
+details[open] {
+    border-color: #38BDF8;
+    background-color: #121820;
+}
+
+summary {
+    font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+summary::after {
+    content: ">";
+    font-size: 0.85rem;
+    color: #888888;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+details[open] > summary::after {
+    transform: rotate(90deg);
+    color: #38BDF8;
+}
+
+details p {
+    margin-top: 10px;
+    color: white;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+details details {
+    background-color: black;
+    border-color: #1F1F1F;
+    margin-top: 10px;
+}
+
+details details summary {
+    color: white;
+    font-size: 1rem;
+}
+
+details details[open] {
+    border-color: #C084FC;
+    background-color: black;
+}
+
+details details summary::after {
+    content: '>';
+    font-size: 1.2rem;
+}
+
+details details[open] > summary::after {
+    transform: rotate(90deg);
+    color: #C084FC;
+}
+
 footer {
     border-top: 1px solid #262626;
     padding: 1.25rem 1.75rem;
